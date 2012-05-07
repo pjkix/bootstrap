@@ -3,7 +3,7 @@
 
 
 // Make the div behave like a button
-.btn-group, 
+.btn-group, // btn-group only used for grouping
 .btn-combo // combo behaves like group but without grouping or spacing
 {
   position: relative;
@@ -30,15 +30,31 @@
 
 // Float them, remove border radius, then re-add to first and last elements
 .btn-group > .btn,
-.btn-group > .btn-combo > .btn {
+.btn-group > .btn-combo
+{
   position: relative;
   float: left;
   margin-left: -1px;
   .border-radius(0);
 }
+// NEW! - just the floating and margin (split)
+.btn-combo > .btn {
+    position: relative;
+    float: left;
+    margin-left: -1px;
+}
+// NEW! - just removing radius on combo btn, toggle
+.btn-group > .btn-combo > .btn,
+.btn-group > .btn-combo > .dropdown-toggle,
+.btn-combo > .btn ,
+.btn-group > .btn-combo > .btn:first-child, // NEW! - first btn of combo is round
+{ 
+    .border-radius(0);
+}
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
-.btn-group > .btn:first-child, 
-.btn-group > .btn-combo:first-child > .btn
+.btn-combo > .btn:first-child, // NEW! - first btn of combo is round
+.btn-group > .btn:first-child, // OG
+.btn-group > .btn-combo:first-child > .btn:first-child // NEW! - first btn of first combo is round
 {
   margin-left: 0;
      -webkit-border-top-left-radius: 4px;
@@ -49,9 +65,11 @@
           border-bottom-left-radius: 4px;
 }
 // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
-.btn-group > .btn:last-child,
-.btn-group > .dropdown-toggle,
-.btn-group > .btn-combo > .dropdown-toggle
+.btn-group > .btn:last-child, // OG
+.btn-group > .dropdown-toggle, // OG
+.btn-combo > .dropdown-toggle, // NEW - combo toggles are round
+.btn-group > .btn-combo:last-child > .btn:last-child, // NEW! - last btn of last combo is round
+.btn-group > .btn-combo:last-child > .dropdown-toggle // NEW! - dropdown fo last combo is round
 {
      -webkit-border-top-right-radius: 4px;
          -moz-border-radius-topright: 4px;
@@ -101,7 +119,7 @@
 
 // Give the line between buttons some depth
 .btn-group > .dropdown-toggle,
-.btn-comnbo > .dropdown-toggle
+.btn-group > .btn-comnbo > .dropdown-toggle
 {
   padding-left: 8px;
   padding-right: 8px;
