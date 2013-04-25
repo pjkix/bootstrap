@@ -651,14 +651,18 @@
     .row-fluid {
       width: 100%;
       .clearfix();
-      [class*="span"] {
+      // replaced [class*="span"]
+      .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12  {
         .input-block-level();
         float: left;
         margin-left: @fluidGridGutterWidth;
         *margin-left: @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
       }
-      [class*="span"]:first-child {
-        margin-left: 0;
+      // replaced [class*="span"]
+          .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+            &:first-child {
+              margin-left: 0;
+        }
       }
 
       // Space grid-sized controls properly if multiple per line

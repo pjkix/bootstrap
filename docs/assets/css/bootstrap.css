@@ -415,7 +415,18 @@ a:focus {
   clear: both;
 }
 
-.row-fluid [class*="span"] {
+.row-fluid .span1,
+.row-fluid .span2,
+.row-fluid .span3,
+.row-fluid .span4,
+.row-fluid .span5,
+.row-fluid .span6,
+.row-fluid .span7,
+.row-fluid .span8,
+.row-fluid .span9,
+.row-fluid .span10,
+.row-fluid .span11,
+.row-fluid .span12 {
   display: block;
   float: left;
   width: 100%;
@@ -427,7 +438,18 @@ a:focus {
           box-sizing: border-box;
 }
 
-.row-fluid [class*="span"]:first-child {
+.row-fluid .span1:first-child,
+.row-fluid .span2:first-child,
+.row-fluid .span3:first-child,
+.row-fluid .span4:first-child,
+.row-fluid .span5:first-child,
+.row-fluid .span6:first-child,
+.row-fluid .span7:first-child,
+.row-fluid .span8:first-child,
+.row-fluid .span9:first-child,
+.row-fluid .span10:first-child,
+.row-fluid .span11:first-child,
+.row-fluid .span12:first-child {
   margin-left: 0;
 }
 
