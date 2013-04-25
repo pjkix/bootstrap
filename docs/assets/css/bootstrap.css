@@ -279,7 +279,18 @@ a:focus {
   clear: both;
 }
 
-[class*="span"] {
+.span1,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6,
+.span7,
+.span8,
+.span9,
+.span10,
+.span11,
+.span12 {
   float: left;
   min-height: 1px;
   margin-left: 20px;
